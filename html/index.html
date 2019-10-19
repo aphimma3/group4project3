@@ -1,0 +1,3784 @@
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>Google Maps - pygmaps </title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel = "stylesheet" type = "text/css" href = "style.css" />
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=visualization&sensor=true_or_false&key=AIzaSyCXcIDToFFAxJPkKKEeQGw_SOOhe2Rfhsg"></script>
+<script type="text/javascript">
+	function initialize() {
+		var centerlatlng = new google.maps.LatLng(35.227085, -80.843124);
+		var myOptions = {
+			zoom: 11,
+			center: centerlatlng,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+		var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+		var latlng = new google.maps.LatLng(35.231310, -80.847730);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "Charlotte Gateway Station",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.301100, -80.805680);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "Derita",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.335180, -80.825040);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "Harris",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.353580, -80.822080);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "Eastfield",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.377550, -80.833610);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "Hambright",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.410940, -80.840990);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "Huntersville",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.449840, -80.843400);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "Sam Furr",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.481200, -80.857830);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "Cornelius",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.500610, -80.849800);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "Davidson",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.547670, -80.848950);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "Mount Mourne",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.106879, -80.882237);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/0000FF.png');
+		var marker = new google.maps.Marker({
+		title: "I-485/South Blvd",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.119992, -80.882237);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/0000FF.png');
+		var marker = new google.maps.Marker({
+		title: "Sharon Road West",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.134202, -80.876641);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/0000FF.png');
+		var marker = new google.maps.Marker({
+		title: "Arrowood",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.150680, -80.876791);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/0000FF.png');
+		var marker = new google.maps.Marker({
+		title: "Archdale",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.162137, -80.877838);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/0000FF.png');
+		var marker = new google.maps.Marker({
+		title: "Tyvola",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.176200, -80.879288);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/0000FF.png');
+		var marker = new google.maps.Marker({
+		title: "Woodlawn",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.192032, -80.875522);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/0000FF.png');
+		var marker = new google.maps.Marker({
+		title: "Scaleybark",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.199771, -80.868959);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/0000FF.png');
+		var marker = new google.maps.Marker({
+		title: "New Bern",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.212430, -80.858862);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/0000FF.png');
+		var marker = new google.maps.Marker({
+		title: "East/West",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.215676, -80.855332);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/0000FF.png');
+		var marker = new google.maps.Marker({
+		title: "Bland St",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.218905, -80.851835);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/0000FF.png');
+		var marker = new google.maps.Marker({
+		title: "Carson",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.221287, -80.846994);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/0000FF.png');
+		var marker = new google.maps.Marker({
+		title: "Stonewall",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.222255, -80.845430);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/0000FF.png');
+		var marker = new google.maps.Marker({
+		title: "3rd St/Convention Center",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.225510, -80.840870);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/0000FF.png');
+		var marker = new google.maps.Marker({
+		title: "Charlotte Transportation Center/Arena",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.227316, -80.838126);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/0000FF.png');
+		var marker = new google.maps.Marker({
+		title: "7th St",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.229536, -80.835229);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/0000FF.png');
+		var marker = new google.maps.Marker({
+		title: "9th Street",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.236962, -80.823927);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/0000FF.png');
+		var marker = new google.maps.Marker({
+		title: "Parkwood",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.241293, -80.817357);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/0000FF.png');
+		var marker = new google.maps.Marker({
+		title: "25th Street",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.249322, -80.806048);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/0000FF.png');
+		var marker = new google.maps.Marker({
+		title: "36th Street",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.251674, -80.791219);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/0000FF.png');
+		var marker = new google.maps.Marker({
+		title: "Sugar Creek",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.262086, -80.772476);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/0000FF.png');
+		var marker = new google.maps.Marker({
+		title: "Old Concord Rd",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.277708, -80.766727);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/0000FF.png');
+		var marker = new google.maps.Marker({
+		title: "Tom Hunter",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.286747, -80.761149);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/0000FF.png');
+		var marker = new google.maps.Marker({
+		title: "University City Blvd",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.300709, -80.753453);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/0000FF.png');
+		var marker = new google.maps.Marker({
+		title: "McCullough",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.309976, -80.746262);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/0000FF.png');
+		var marker = new google.maps.Marker({
+		title: "JW Clay Blvd",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.311731, -80.733763);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/0000FF.png');
+		var marker = new google.maps.Marker({
+		title: "UNC Charlotte",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.251334, -81.026513);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/C0C0C0.png');
+		var marker = new google.maps.Marker({
+		title: "Belmont",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.241679, -80.982630);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/C0C0C0.png');
+		var marker = new google.maps.Marker({
+		title: "Sam Wilson",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.239092, -80.965643);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/C0C0C0.png');
+		var marker = new google.maps.Marker({
+		title: "I-485",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.235490, -80.943588);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/C0C0C0.png');
+		var marker = new google.maps.Marker({
+		title: "Airport",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.233950, -80.933280);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/C0C0C0.png');
+		var marker = new google.maps.Marker({
+		title: "Stafford Dr",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.226823, -80.911246);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/C0C0C0.png');
+		var marker = new google.maps.Marker({
+		title: "Morris Field Dr",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.224265, -80.890130);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/C0C0C0.png');
+		var marker = new google.maps.Marker({
+		title: "Ashley Rd",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.224018, -80.883211);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/C0C0C0.png');
+		var marker = new google.maps.Marker({
+		title: "Remont Rd",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.223260, -80.872308);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/C0C0C0.png');
+		var marker = new google.maps.Marker({
+		title: "West Morehead St / Suttle Ave",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.226933, -80.864846);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/C0C0C0.png');
+		var marker = new google.maps.Marker({
+		title: "Wesley Heights / Summit Ave",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.229035, -80.856080);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/C0C0C0.png');
+		var marker = new google.maps.Marker({
+		title: "Third Ward / McNinch St",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.230986, -80.848431);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/C0C0C0.png');
+		var marker = new google.maps.Marker({
+		title: "Charlotte Gateway Station",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.235328, -80.841899);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/C0C0C0.png');
+		var marker = new google.maps.Marker({
+		title: "Fourth Ward / Graham St",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.230805, -80.833473);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/C0C0C0.png');
+		var marker = new google.maps.Marker({
+		title: "First Ward / Blue Line",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.220877, -80.826314);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/C0C0C0.png');
+		var marker = new google.maps.Marker({
+		title: "Central Ave",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.218073, -80.814799);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/C0C0C0.png');
+		var marker = new google.maps.Marker({
+		title: "Pecan Ave",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.213283, -80.803436);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/C0C0C0.png');
+		var marker = new google.maps.Marker({
+		title: "Morningside Dr",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.203716, -80.796081);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/C0C0C0.png');
+		var marker = new google.maps.Marker({
+		title: "Coliseum / Ovens",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.200974, -80.779285);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/C0C0C0.png');
+		var marker = new google.maps.Marker({
+		title: "Amity Gardens",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.193655, -80.766284);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/C0C0C0.png');
+		var marker = new google.maps.Marker({
+		title: "Sharon Amity Rd",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.181798, -80.755695);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/C0C0C0.png');
+		var marker = new google.maps.Marker({
+		title: "Conference Dr",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.158047, -80.748703);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/C0C0C0.png');
+		var marker = new google.maps.Marker({
+		title: "Village Lake Dr",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.136414, -80.737754);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/C0C0C0.png');
+		var marker = new google.maps.Marker({
+		title: "Sardis Rd / Galleria",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.126350, -80.728251);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/C0C0C0.png');
+		var marker = new google.maps.Marker({
+		title: "Matthews Township Parkway",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.119506, -80.716414);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/C0C0C0.png');
+		var marker = new google.maps.Marker({
+		title: "Matthews Downtown / Hospital",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.112094, -80.705134);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/C0C0C0.png');
+		var marker = new google.maps.Marker({
+		title: "Matthews Sportsplex",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.103324, -80.697421);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/C0C0C0.png');
+		var marker = new google.maps.Marker({
+		title: "CPCC Levine",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.241730, -80.858690);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "Johnson C. Smith University",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.237100, -80.858660);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "Wesley Heights Way",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.240260, -80.858430);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "Bruns Avenue",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.246850, -80.856790);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "French Street",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.253800, -80.855970);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "Booker Avenue/Oaklawn",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.257030, -80.855580);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "Russell Av",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.262980, -80.854700);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "LaSalle Street",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.273200, -80.854410);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "Rosa Parks Place",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.268280, -80.854000);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "Montana Dr",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.234770, -80.852460);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "Irwin Avenue",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.233800, -80.851130);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "Johnson & Wales",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.231310, -80.847730);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "Charlotte Gateway Station",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.229420, -80.845660);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "Mint Street",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.227200, -80.843070);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "Tryon Street",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.225450, -80.840740);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "CTC/Arena",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.222900, -80.838010);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "Davidson St",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.221220, -80.836080);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "McDowell Street",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.202720, -80.829710);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "Central Piedmont Community College",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.212900, -80.825590);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "Elizabeth and Hawthorne",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.219810, -80.818810);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "Sunnyside",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.221320, -80.818540);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "Barnhardt",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.232850, -80.811080);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "Hawthorne and 5th",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.232850, -80.811080);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "Hawthorne and 8th",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.220260, -80.810800);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "The Plaza",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.219740, -80.804090);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "Veterans Park",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.219300, -80.799230);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "Morningside Drive",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.217960, -80.794400);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "Arnold Drive",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.216950, -80.790930);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "Briar Creek Road",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.215910, -80.784470);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "Eastway Crossing",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.215530, -80.780650);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "Eastway Drive",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.214480, -80.772860);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "Sheridan Drive",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.213740, -80.770260);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "Derby Acres",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.212470, -80.764330);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "Landsdale Dr/Rosehaven Dr",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.192990, -80.761050);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "Eastland Mall",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.210820, -80.759110);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/FFD700.png');
+		var marker = new google.maps.Marker({
+		title: "Winterfield Place",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.416819, -80.804446);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Erwin-Oehler House Acreage",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.118552, -80.727050);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "McLaughlin-Bost House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.081570, -80.893615);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Park Avenue Mill Village",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.201652, -80.821235);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Hamilton Jones House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.085868, -80.890676);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Pineville Commercial Block",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.251844, -80.948175);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "W.D. Beaty House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.162133, -80.784307);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "John Hunter House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.197342, -80.814681);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Mint Museum of Art",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.209993, -80.843877);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Randolph Scott House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.263869, -80.885944);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Hoskins Mill",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.061696, -80.826982);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Big Rock Rock Shelter",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.210995, -80.859300);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Tompkins Machine Shop",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.225953, -80.844672);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "McCausland Building-Thacker's Restaurant",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.071815, -80.772663);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Providence Presbyterian Church",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.212716, -80.854795);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Jones-Garibald House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.407225, -80.886354);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Torrance House & Store",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.210896, -80.856049);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Crutchfield-Bomar-Brem House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.225953, -80.844672);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "McCausland Building-Thacker's Restaurant",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.036843, -80.827809);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Providence Women's Club Community House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.276944, -80.939734);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Thrift Depot of the Piedmont & Northern Railroad Company",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.210141, -80.833497);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Morgan School",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.233276, -80.860979);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Wadsworth House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.207255, -80.821581);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Ratcliffe-Otterbourg House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.480388, -80.871722);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Smithville Rosenwald School",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.117978, -80.906904);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Dinkins Property Cemetery",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.232680, -80.853927);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Stratton House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.210038, -80.859336);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Leeper & Wyatt Store ",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.381546, -80.952075);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Rural Hill Plantation",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.500926, -80.848050);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Holt-Henderson-Copeland House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.169252, -80.964521);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Robinson House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.231280, -80.845326);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Charlotte Fire Station # 4",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.208289, -80.853671);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Rogers House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.148086, -80.999814);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Neel House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.499750, -80.853077);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Falls Store",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.114543, -80.724235);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Heath & Reid General Store",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.082306, -80.895031);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Park Avenue Mill Village",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.428827, -80.921331);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Blythe Homestead",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.082682, -80.894782);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Park Avenue Mill Village",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.231884, -80.839552);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Frederick Apartments",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.222075, -80.838168);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Charlotte City Hall",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.382860, -80.957026);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Holly Bend",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.222391, -80.847942);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Query-Spivey-McGee Building",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.179162, -80.841304);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Wing Haven ",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.229925, -80.838057);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Thies Building",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.085623, -80.891169);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Yandell Hotel & Grocery Store",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.350836, -80.889437);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Agricultural Building (Long Creek)",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.498934, -80.853759);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Davidson Colored School/Ada Jenkins School",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.425265, -80.782094);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "McAuley Road Farmland",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.225032, -80.818337);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Louise Cotton Mill",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.209874, -80.853239);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "City House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.117017, -80.718735);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Funderburk-Plaxco House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.211751, -80.860870);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Nebel Knitting Mill Annex",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.504119, -80.849866);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Delburg Cotton Mill House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.380953, -80.944877);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Rural Hill Plantation Expansion",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.406148, -80.895128);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Torrance Mill",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.201449, -80.830037);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Craig House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.228654, -80.864286);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Coco Cola Company Bottling Plant",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.229889, -80.845780);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Gateway & Century Building",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.210686, -80.854406);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Mallonee-Jones House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.410837, -80.841087);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Bank of Huntersville (former)",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.224352, -80.833655);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Shotgun House A",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.408423, -80.883031);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Cedar Grove Land",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.081997, -80.893615);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Park Avenue Mill Village",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.406148, -80.889106);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Cedar Grove Land",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.214054, -80.823376);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Independence Park",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.109338, -80.710911);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Star of St. Matthews Lodge #566",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.232658, -80.840195);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Lyles-Sims House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.228775, -80.865576);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Grinnell/General Fire Extinguisher Company",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.249353, -80.802394);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Mecklenburg Mill",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.116998, -80.721810);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Matthews Post Office (former)",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.215110, -80.819634);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Ziem House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.416819, -80.804446);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Erwin-Oehler House Acreage",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.229836, -80.844244);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Bagley-Mullen House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.232485, -80.841090);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Sloan-Davidson House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.347940, -80.880821);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "St. Mark's Episcopal Church",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.442518, -80.773702);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Bradford Farm",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.493675, -80.834408);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Restormel",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.345722, -80.882087);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Long Creek Mill Ruin",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.277188, -80.944716);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Thrift Mill",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.085957, -80.890720);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Pineville Commercial Block",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.192059, -80.829453);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "McManaway House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.234714, -80.832264);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Standard Oil Company of New Jersey Filling Station",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.225001, -80.933704);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "W.P.A. Douglas Airport Hangar",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.226652, -80.819294);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Red Front Department Store",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.247188, -80.805812);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Hand Pharmacy Building",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.110740, -80.959821);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Neely Slave Cemetery",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.205748, -80.828631);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Myers Park Streetcar Waiting Station",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.084869, -80.888170);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Oakley House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.407215, -80.887629);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Cedar Grove House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.404884, -80.909558);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Ingleside",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.226658, -80.836748);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Treloar. William House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.227721, -80.795922);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Newcombe-McElwee House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.347028, -80.822705);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Croft School",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.081472, -80.893443);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Park Avenue Mill Village",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.219145, -80.860135);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Joseph Sykes Brothers Building",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.082072, -80.894609);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Park Avenue Mill Village",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.496127, -80.848807);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Davidson School",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.085849, -80.890417);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Pineville Commercial Block",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.243604, -80.856864);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Carnegie Library Building (old) (JCSU Campus)",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.214322, -80.844547);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Addison Apartment Building",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.211206, -80.816995);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Trolley Walk",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.211223, -80.855877);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Scott-Hoke House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.205058, -80.795195);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Charlotte Coliseum",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.218385, -80.854601);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Carolina Cadillac Company",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.245572, -80.857282);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Grand Theater",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.225351, -80.846149);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Latta Arcade",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.442518, -80.773702);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Bradford Store",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.170789, -80.959743);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Hayes-Byrum Store & House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.230090, -80.838341);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Thies Building",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.228577, -80.838319);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "First United Presbyterian Church",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.183163, -80.955094);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Steele Creek Presbyterian Church",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.243604, -80.856864);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Carter Hall (JCSU Campus)",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.211230, -80.854277);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Harrill-Porter House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.113112, -80.722435);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Matthews School",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.243749, -80.880692);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "McQuay House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.221374, -80.837346);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Mecklenburg County Courthouse",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.036843, -80.827809);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Providence Women's Club Community House (land)",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.081773, -80.894048);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Park Avenue Mill Village",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.247073, -80.805141);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Charlotte Fire Station # 7",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.208630, -80.858730);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Atherton Mill House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.225953, -80.844672);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "McCausland Building-Thacker's Restaurant",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.229515, -80.845347);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Builders Building",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.430402, -80.782185);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "McAuley Road Farmland",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.233618, -80.840788);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Crowell-Berryhill Store",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.229282, -80.861980);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Carolina Transfer & Storage Company Building",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.216659, -80.820694);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Golden House (Moore-Golden)",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.210752, -80.855833);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Mayer House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.116952, -80.778484);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Grier-Rea House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.227144, -80.843922);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "First National Bank Building",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.081794, -80.893183);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Park Avenue Mill Village",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.214054, -80.823376);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Independence Park",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.082416, -80.895215);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Park Avenue Mill Village",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.228111, -80.864454);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Grinnell/General Fire Extinguisher Company",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.199733, -80.831270);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Goff House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.061696, -80.826982);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Big Rock Rock Shelter",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.214054, -80.823376);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Independence Park",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.201965, -80.825625);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Thies House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.211476, -80.860049);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Nebel Knitting Mill",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.212805, -80.853996);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Villalonga-Alexander House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.176799, -80.790126);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Henderson-King House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.082729, -80.894988);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Park Avenue Mill Village",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.119414, -80.727180);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Grier-Furr House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.082141, -80.893831);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Park Avenue Mill Village",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.082242, -80.894048);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Park Avenue Mill Village",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.416819, -80.804446);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Erwin-Oehler House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.198756, -80.827096);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Lambeth-Gosset House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.230700, -80.843293);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "St. Peter's Hospital",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.194825, -80.754720);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Cohen-Fumaro House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.085905, -80.890590);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Pineville Commercial Block (including interior)",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.410907, -80.846714);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Agricultural Building (Huntersville)",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.451437, -80.842136);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Caldwell Station School",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.229757, -80.842363);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "North Carolina Medical College Building",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.493434, -80.843250);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Mabonsie",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.221985, -80.858404);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Electric Supply & Equipment Company Building",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.164922, -80.664446);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Flow-Lee House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.085957, -80.890860);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Pineville Commercial Block",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.424469, -80.827442);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Osborne House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.411251, -80.840395);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Huntersville Town Jail",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.081895, -80.893399);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Park Avenue Mill Village",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.369784, -80.902322);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "McElroy House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.228915, -80.841190);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Mayfair Manor (Dunhill Hotel)",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.209550, -80.860481);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Parks-Cramer Company Complex",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.233510, -80.854333);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Woodlawn Avenue Duplex",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.241657, -80.833757);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Parks Hutchinson School",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.205170, -80.824465);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Hermitage Court Gateways",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.228759, -80.865363);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Grinnell/General Fire Extinguisher Company",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.231649, -80.839630);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Liddel-McNinch House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.502236, -80.847517);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Elm & Oak Row (Davidson College Campus)",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.207276, -80.857905);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Helms-Bell House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.226339, -80.845001);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Johnston Building",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.085893, -80.890963);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Pineville Commercial Block",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.214054, -80.823376);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Independence Park",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.232693, -80.853844);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Stratton House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.366288, -80.897889);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Hopewell Presbyterian Church",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.476662, -80.850623);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Hoyle House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.036843, -80.827809);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Providence Women's Club Community House (land)",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.243588, -80.856936);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Stone Entry Gates (JCSU Campus)",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.477455, -80.844309);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Potts Place",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.179001, -80.840871);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Wing Haven ",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.216963, -80.851855);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Charlotte Fire Station # 2",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.345707, -80.880215);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Long Creek Mill Ruin",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.212055, -80.853931);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Gautier-Gilchrist House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.116563, -80.722243);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Funderburk Brothers Building",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.503900, -80.848936);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Davidson Cotton Mill",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.189198, -80.770737);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Arthur Smith Studios",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.233665, -80.840268);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Berryhill House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.227735, -80.837325);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Philip Carey Building",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.226247, -80.843790);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Home Federal Savings & Loan",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.228303, -80.840623);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Carolina Theatre (old)",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.201500, -80.827355);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Duke Mansion (Lynnwood)",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.430848, -80.779901);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "McAuley Road Farmland",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.116444, -80.721528);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Renfrow Hardware Store",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.501704, -80.851030);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Unity Church Cabin/Lingle Hut",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.263912, -80.707594);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Robinson Rock House Ruin",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.202645, -80.822251);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Charlotte Fire Station # 6",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.229039, -80.839981);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "First Baptist Church (Spirit Square)",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.243604, -80.856864);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Biddle Hall (JCSU Campus)",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.400085, -80.826260);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Torrence-Lytle School",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.081675, -80.893875);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Park Avenue Mill Village",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.223025, -80.841995);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Mecklenburg Investment Company Building",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.116871, -80.722373);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Funderburk Brothers Blacksmith Shop & Grist Mill",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.159741, -80.822902);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Morrocroft",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.205523, -80.808742);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Palmer Fire School",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.476910, -80.855271);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Mt. Zion Methodist Church Parsonage",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.220694, -80.808840);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Midwood Elementary School",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.117090, -80.978129);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "McClintock Rosenwald School",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.223104, -80.841628);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Grace A.M.E. Zion Church",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.254790, -80.805716);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Rosedale",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.081921, -80.894307);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Park Avenue Mill Village",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.312376, -80.864174);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "McIntyre Historic Site",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.224118, -80.847178);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Ratcliffe Florist Shop",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.157589, -80.827462);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "St. Lloyd Presbyterian Church Cemetery",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.117708, -80.720403);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Massey-Clark House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.115102, -80.729021);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "R.F. Outen Pottery Land",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.216820, -80.985283);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Sloan-Porter House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.118343, -80.725448);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Renfrow-Lemmond House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.230283, -80.856590);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Armature Winding Company Complex",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.231945, -80.845952);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Charlotte Cotton Mills",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.161186, -80.670361);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Forbis-Venn House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.301618, -80.811176);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Welch-McIntosh House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.279147, -80.743463);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Newell Rosenwald School",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.259100, -80.795857);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Sugaw Creek Schoolhouse",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.248772, -80.804030);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Johnston Mill",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.504200, -80.848417);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Southern Power Company Transformer House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.229461, -80.807743);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "VanLandingham Estate",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.217308, -80.821386);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Hawthorne Lane United Methodist Church",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.269548, -80.991187);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Hovis-Spratt House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.239118, -80.846060);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "John B. Ross & Company Mill",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.214322, -80.844547);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Advent Christian Church",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.500483, -80.848353);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Helper Hotel (Carolina Inn)",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.196573, -80.821349);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Eastover Elementary School",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.383115, -80.948505);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Rural Hill Plantation Expansion",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.056487, -80.748139);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Hennigan Place",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.228710, -80.862630);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Crane Company Building",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.197178, -80.820921);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Eastover Elementary School",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.216187, -80.833153);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Thompson Orphanage Chapel",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.230490, -80.837963);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Hovis Funeral Home",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.445274, -80.781185);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Cashion & Moore Family Cemetery",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.082216, -80.894825);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Park Avenue Mill Village",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.232693, -80.853844);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Stratton House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.127448, -80.796785);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Dinkins House & Lodge",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.200707, -80.852504);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Dilworth Airplane Bungalow",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.500364, -80.846961);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Philanthropic Hall (Davidson College Campus)",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.246227, -80.858060);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Mt. Carmel Baptist Church",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.204005, -80.973831);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Cooper Log House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.223795, -80.832805);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Little Rock A.M.E. Zion Church",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.224313, -80.833624);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Shotgun House B",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.248364, -80.859752);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Biddleville Cemetery",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.082428, -80.894382);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Park Avenue Mill Village",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.225953, -80.844672);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "McCausland Building-Thacker's Restaurant",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.405192, -80.841974);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Ranson House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.246137, -80.809316);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Highland Park Mill No. 3",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.478575, -80.855401);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Sherrill-Robbins House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.227481, -80.870570);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Bryant Park",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.200274, -80.824673);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Reynolds-Gourmajenko House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.475572, -80.817654);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Beaver Dam House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.036843, -80.827809);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Providence Women's Club Community House (land)",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.207690, -80.861778);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Atherton Cotton Mills",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.117537, -80.722719);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Phillips House and Morris Barn",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.132794, -80.737210);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Roseland Cemetery",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.085808, -80.890607);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Pineville Commercial Block",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.234072, -80.832783);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Seaboard Air Line Railroad Station",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.364718, -80.819380);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Bethesda Schoolhouse",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.213042, -80.843379);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Charlotte's Woman's Club",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.251915, -80.856482);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Excelsior Club",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.368890, -80.809684);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Edgewood Farmhouse",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.211348, -80.826729);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Myers Park Streetcar Waiting Station",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.336011, -80.738645);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Siloam School",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.219053, -80.829215);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "American Legion Memorial Stadium",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.232805, -80.841444);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Overcarsh House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.221313, -80.857791);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Textile Mill Supply Company Building",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.209969, -80.831086);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Mt. Zion Lutheran Church",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.179218, -80.841477);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Wing Haven ",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.233627, -80.838102);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Young-Morrison House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.237143, -80.861341);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Charlotte Fire Station # 5",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.085945, -80.890772);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Pineville Commercial Block",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.233488, -80.839098);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Poplar Apartments",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.112584, -80.714837);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Rowland-Clay House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.231436, -80.831343);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Alpha Cotton Mill",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.115102, -80.729021);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "R.F. Outen Pottery",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.255603, -80.999925);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Sandifer House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.403637, -80.844604);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Gluyas House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.232734, -80.836179);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "First Associate Reformed Presbyterian Church",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.085985, -80.891042);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Pineville Commercial Block (including interior)",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.502236, -80.847517);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Eumenean Hall (Davidson College Campus)",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.249879, -80.856433);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Charlotte Water Works/Vest Station",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.234098, -80.847333);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Elmwood/Pinewood Cemetery",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.116343, -80.693063);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "McEwen-Moore Farmhouse",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.369376, -80.810606);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Edgewood Farmhouse",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.434133, -80.778691);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "McAuley Road Farmland",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.240960, -80.781984);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Dr. Elmer H. Garinger High School",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.230655, -80.857843);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Defiance Sock Mills",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.082506, -80.894577);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Park Avenue Mill Village",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.505947, -80.844325);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Armour-Adams House",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.395947, -80.875699);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Oak Lawn",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.248561, -80.690964);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "White Oak",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.179009, -80.846421);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Dr. Whitley Building",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.229648, -80.843079);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "Settler's Cemetery",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.219375, -80.834016);
+		var img = new google.maps.MarkerImage('/anaconda3/lib/python3.7/site-packages/gmplot/markers/800080.png');
+		var marker = new google.maps.Marker({
+		title: "East Ave Tabernacle A.R.P. Church (former)",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+var PolylineCoordinates = [
+new google.maps.LatLng(35.231310, -80.847730),
+new google.maps.LatLng(35.301100, -80.805680),
+new google.maps.LatLng(35.335180, -80.825040),
+new google.maps.LatLng(35.353580, -80.822080),
+new google.maps.LatLng(35.377550, -80.833610),
+new google.maps.LatLng(35.410940, -80.840990),
+new google.maps.LatLng(35.449840, -80.843400),
+new google.maps.LatLng(35.481200, -80.857830),
+new google.maps.LatLng(35.500610, -80.849800),
+new google.maps.LatLng(35.547670, -80.848950),
+];
+
+var Path = new google.maps.Polyline({
+clickable: false,
+geodesic: true,
+path: PolylineCoordinates,
+strokeColor: "#FF0000",
+strokeOpacity: 1.000000,
+strokeWeight: 3
+});
+
+Path.setMap(map);
+
+
+var PolylineCoordinates = [
+new google.maps.LatLng(35.106879, -80.882237),
+new google.maps.LatLng(35.119992, -80.882237),
+new google.maps.LatLng(35.134202, -80.876641),
+new google.maps.LatLng(35.150680, -80.876791),
+new google.maps.LatLng(35.162137, -80.877838),
+new google.maps.LatLng(35.176200, -80.879288),
+new google.maps.LatLng(35.192032, -80.875522),
+new google.maps.LatLng(35.199771, -80.868959),
+new google.maps.LatLng(35.212430, -80.858862),
+new google.maps.LatLng(35.215676, -80.855332),
+new google.maps.LatLng(35.218905, -80.851835),
+new google.maps.LatLng(35.221287, -80.846994),
+new google.maps.LatLng(35.222255, -80.845430),
+new google.maps.LatLng(35.225510, -80.840870),
+new google.maps.LatLng(35.227316, -80.838126),
+new google.maps.LatLng(35.229536, -80.835229),
+new google.maps.LatLng(35.236962, -80.823927),
+new google.maps.LatLng(35.241293, -80.817357),
+new google.maps.LatLng(35.249322, -80.806048),
+new google.maps.LatLng(35.251674, -80.791219),
+new google.maps.LatLng(35.262086, -80.772476),
+new google.maps.LatLng(35.277708, -80.766727),
+new google.maps.LatLng(35.286747, -80.761149),
+new google.maps.LatLng(35.300709, -80.753453),
+new google.maps.LatLng(35.309976, -80.746262),
+new google.maps.LatLng(35.311731, -80.733763),
+];
+
+var Path = new google.maps.Polyline({
+clickable: false,
+geodesic: true,
+path: PolylineCoordinates,
+strokeColor: "#0000FF",
+strokeOpacity: 1.000000,
+strokeWeight: 3
+});
+
+Path.setMap(map);
+
+
+var PolylineCoordinates = [
+new google.maps.LatLng(35.251334, -81.026513),
+new google.maps.LatLng(35.241679, -80.982630),
+new google.maps.LatLng(35.239092, -80.965643),
+new google.maps.LatLng(35.235490, -80.943588),
+new google.maps.LatLng(35.233950, -80.933280),
+new google.maps.LatLng(35.226823, -80.911246),
+new google.maps.LatLng(35.224265, -80.890130),
+new google.maps.LatLng(35.224018, -80.883211),
+new google.maps.LatLng(35.223260, -80.872308),
+new google.maps.LatLng(35.226933, -80.864846),
+new google.maps.LatLng(35.229035, -80.856080),
+new google.maps.LatLng(35.230986, -80.848431),
+new google.maps.LatLng(35.235328, -80.841899),
+new google.maps.LatLng(35.230805, -80.833473),
+new google.maps.LatLng(35.220877, -80.826314),
+new google.maps.LatLng(35.218073, -80.814799),
+new google.maps.LatLng(35.213283, -80.803436),
+new google.maps.LatLng(35.203716, -80.796081),
+new google.maps.LatLng(35.200974, -80.779285),
+new google.maps.LatLng(35.193655, -80.766284),
+new google.maps.LatLng(35.181798, -80.755695),
+new google.maps.LatLng(35.158047, -80.748703),
+new google.maps.LatLng(35.136414, -80.737754),
+new google.maps.LatLng(35.126350, -80.728251),
+new google.maps.LatLng(35.119506, -80.716414),
+new google.maps.LatLng(35.112094, -80.705134),
+new google.maps.LatLng(35.103324, -80.697421),
+];
+
+var Path = new google.maps.Polyline({
+clickable: false,
+geodesic: true,
+path: PolylineCoordinates,
+strokeColor: "#C0C0C0",
+strokeOpacity: 1.000000,
+strokeWeight: 3
+});
+
+Path.setMap(map);
+
+
+var PolylineCoordinates = [
+new google.maps.LatLng(35.241730, -80.858690),
+new google.maps.LatLng(35.237100, -80.858660),
+new google.maps.LatLng(35.240260, -80.858430),
+new google.maps.LatLng(35.246850, -80.856790),
+new google.maps.LatLng(35.253800, -80.855970),
+new google.maps.LatLng(35.257030, -80.855580),
+new google.maps.LatLng(35.262980, -80.854700),
+new google.maps.LatLng(35.273200, -80.854410),
+new google.maps.LatLng(35.268280, -80.854000),
+new google.maps.LatLng(35.234770, -80.852460),
+new google.maps.LatLng(35.233800, -80.851130),
+new google.maps.LatLng(35.231310, -80.847730),
+new google.maps.LatLng(35.229420, -80.845660),
+new google.maps.LatLng(35.227200, -80.843070),
+new google.maps.LatLng(35.225450, -80.840740),
+new google.maps.LatLng(35.222900, -80.838010),
+new google.maps.LatLng(35.221220, -80.836080),
+new google.maps.LatLng(35.202720, -80.829710),
+new google.maps.LatLng(35.212900, -80.825590),
+new google.maps.LatLng(35.219810, -80.818810),
+new google.maps.LatLng(35.221320, -80.818540),
+new google.maps.LatLng(35.232850, -80.811080),
+new google.maps.LatLng(35.232850, -80.811080),
+new google.maps.LatLng(35.220260, -80.810800),
+new google.maps.LatLng(35.219740, -80.804090),
+new google.maps.LatLng(35.219300, -80.799230),
+new google.maps.LatLng(35.217960, -80.794400),
+new google.maps.LatLng(35.216950, -80.790930),
+new google.maps.LatLng(35.215910, -80.784470),
+new google.maps.LatLng(35.215530, -80.780650),
+new google.maps.LatLng(35.214480, -80.772860),
+new google.maps.LatLng(35.213740, -80.770260),
+new google.maps.LatLng(35.212470, -80.764330),
+new google.maps.LatLng(35.192990, -80.761050),
+new google.maps.LatLng(35.210820, -80.759110),
+];
+
+var Path = new google.maps.Polyline({
+clickable: false,
+geodesic: true,
+path: PolylineCoordinates,
+strokeColor: "#6495ED",
+strokeOpacity: 1.000000,
+strokeWeight: 3
+});
+
+Path.setMap(map);
+
+
+	}
+</script>
+</head>
+<body style="margin:0px; padding:0px;" onload="initialize()">
+  <!-- Start of navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="index.html">Charlotte Tourism</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul class="navbar-nav  ml-auto navbar-right">
+        <li class="nav-item">
+          <a class="nav-link" href="resources.html">Resources</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="team.html">Team Members</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- End of navbar -->
+  <div class="container">
+    <div id="map_canvas" style="width: 100%; height: 100%;"></div>
+  </div>
+</body>
+</html>
