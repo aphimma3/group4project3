@@ -1,25 +1,30 @@
-DROP TABLE IF EXISTS Lynx; 
-DROP TABLE IF EXISTS Top_Rated_Restaurant;
-DROP TABLE IF EXISTS Tourist_Attraction;
+DROP TABLE IF EXISTS lynx;
+DROP TABLE IF EXISTS restaurants;
+DROP TABLE IF EXISTS attractions;
+DROP TABLE IF EXISTS top_rated_restaurant;
+DROP TABLE IF EXISTS tourist_attraction;
 
 -- Create TABLE  LYNX
-CREATE table Lynx (
-  Location VARCHAR(100) NOT NULL,
+CREATE table lynx (
+  id SERIAL PRIMARY KEY,
+  Name VARCHAR(100) NOT NULL,
   Latitude VARCHAR (100)NOT NULL,
   Longitude VARCHAR(100) NOT NULL,
   Category VARCHAR(100)NOT NULL
 );
 
 -- Create table TOP RATED RESTAURANT
-CREATE TABLE Top_Rated_Restaurant (
+CREATE TABLE restaurants (
+  id SERIAL PRIMARY KEY,
   Name VARCHAR(100) NOT NULL,
   Latitude VARCHAR(100) NOT NULL,
   Longitude VARCHAR(100) NOT NULL,
-  Category VARCHAR (100) NOT NULL
+  Category VARCHAR (255) NOT NULL
 );
 
 -- Create table  TOURIST ATTRACTION
-CREATE TABLE Tourist_Attraction (
+CREATE TABLE attractions (
+  id SERIAL PRIMARY KEY,
   Name VARCHAR(100) NOT NULL,
   Latitude VARCHAR(100) NOT NULL,
   Longitude VARCHAR(100) NOT NULL,
