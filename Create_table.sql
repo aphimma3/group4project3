@@ -27,6 +27,5 @@ CREATE TABLE attractions (
   id SERIAL PRIMARY KEY,
   Name VARCHAR(100) NOT NULL,
   Latitude VARCHAR(100) NOT NULL,
-  Longitude VARCHAR(100) NOT NULL,
-  Address VARCHAR(100)
+  Longitude VARCHAR(100) NOT NULL
 );
