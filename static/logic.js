@@ -45,8 +45,8 @@ function createFeatures(hotspotData) {
       weight: 1,
       opacity: 1,
       fillOpacity: 0.8,
-      radius: 100
-    }).bindPopup("<h3>" + item.name + "</h3><hr><p>Category: " + item.category + "</p>");
+      radius: 200
+    }).bindPopup("<h4>" + item.name + "</h4><hr><p>Category: " + item.category + "</p>");
 
     if (item.category == 'Attraction') {
       attraction_spots.push(place);
