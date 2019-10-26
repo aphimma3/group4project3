@@ -125,11 +125,11 @@ def lynx_data():
 
 @app.route("/attraction_data")
 def attraction_data():
-    return render_template("attractions_df.html")
+    return render_template("top_attractions.html")
 
 @app.route("/restaurants_data")
 def restaurants_data():
-    return render_template("restaurants_df.html")
+    return render_template("top_restaurants_df.html")
 
 @app.route("/")
 def home():
