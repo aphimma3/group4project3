@@ -9,6 +9,7 @@
 - Import **top_rated_restaurants.csv** into the **restaurants** table
 - Import **lynx.csv** into the **lynx** table
 - Import **lat_long.csv** into the **attractions** table
+- Import **hotspots.csv** into the **hotspots** table
 
 ## Running the app
 
