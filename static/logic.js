@@ -1,107 +1,121 @@
- // JS & Leaflet stuff
+// Store our API endpoint inside queryUrl
+var queryUrl = "/api/hotspots";
 
- var map = L.map('map', {
-  center: [35.227087, -80.843127],
-  zoom: 12,
-  minZoom: 3,
-  maxZoom: 18
+var mymap = L.map('map').setView([35.227087, -80.843127], 13);
+
+// L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
+//     attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
+//     maxZoom: 18,
+//     id: "mapbox.streets",
+//     accessToken: API_KEY
+//   }).addTo(mymap);
+// Perform a GET request to the query URL
+d3.json(queryUrl, function(data) {
+  // Once we get a response, send the data.features object to the createFeatures function
+  console.table(data);
+  createFeatures(data);
 });
 
-// Adding tile layer
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+function createFeatures(hotspotData) {
+  blue_line = []
+  red_line = []
+  silver_line = []
+  gold_line = []
+  attraction_spots = []
+  food_spots = []
+  hotspotData.forEach(function (item, index) {
 
-// Add geoJSON
-d3.json('/api/lynx', function(response) {
+    var color;
+      if (item.category == 'Blue' ) {
+        color = 'blue'
+      } else if (item.category == 'Red') {
+        color = "red"
+      } else if (item.category == 'Silver') {
+        color = "gray"
+      } else if (item.category == 'Gold') {
+        color = "yellow"
+      } else if (item.category == 'Attraction') {
+        color = "green"
+      } else  {
+        color = "orange"
+      }
+    var place = L.circle([item.latitude, item.longitude], {
+      color: 'black',
+      fillColor: color,
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8,
+      radius: 100
+    }).bindPopup("<h3>" + item.name + "</h3><hr><p>Category: " + item.category + "</p>");
 
-  // Create a new marker cluster group
-  var lynx_markers = L.markerClusterGroup();
-
-  // Loop through data
-  for (var i = 0; i < response.length; i++) {
-
-    // Set the data location property to a variable
-    var name = response[i].name;
-
-    // Check for location property
-    if (name) {
-
-      // Add a new marker to the cluster group and bind a pop-up
-      lynx_markers.addLayer(L.marker([response.latitude, response.longitude])
-        .bindPopup(response[i].name));
+    if (item.category == 'Attraction') {
+      attraction_spots.push(place);
+    } else if (item.category == 'Blue') {
+      blue_line.push(place);
+    } else if (item.category == 'Red') {
+      red_line.push(place);
+    } else if (item.category == 'Silver') {
+      silver_line.push(place);
+    } else if (item.category == 'Gold') {
+      gold_line.push(place);
+    } else {
+      food_spots.push(place);
     }
 
-  }
+    // place.addTo(mymap);
+  });
 
-  // Add our marker cluster layer to the map
-  myMap.addLayer(lynx_markers);
+  var attractions = L.layerGroup(attraction_spots);
+  var food = L.layerGroup(food_spots);
+  var lynx_blue = L.layerGroup(blue_line);
+  var lynx_red = L.layerGroup(red_line);
+  var lynx_silver = L.layerGroup(silver_line);
+  var lynx_gold = L.layerGroup(gold_line);
 
-});
+  createMap(attractions, food, lynx_blue, lynx_red, lynx_silver, lynx_gold);
+}
 
-d3.json('/api/restaurants', function(response) {
 
-  // Create a new marker cluster group
-  var eats_markers = L.markerClusterGroup();
+function createMap(attractions, food, lynx_blue, lynx_red, lynx_silver, lynx_gold) {
 
-  // Loop through data
-  for (var i = 0; i < response.length; i++) {
+  // Define streetmap and darkmap layers
 
-    // Set the data location property to a variable
-    var name = response[i].name;
+  var streetmap = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
+    attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
+    maxZoom: 18,
+    id: "mapbox.streets",
+    accessToken: API_KEY
+  });
 
-    // Check for location property
-    if (name) {
+  var darkmap = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
+    attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
+    maxZoom: 18,
+    id: "mapbox.dark",
+    accessToken: API_KEY
+  });
 
-      // Add a new marker to the cluster group and bind a pop-up
-      eats_markers.addLayer(L.marker([response.latitude, response.longitude])
-        .bindPopup(response[i].name));
-    }
+  // Define a baseMaps object to hold our base layers
+  var baseMaps = {
+    "Street Map": streetmap,
+    "Dark Map": darkmap
+  };
 
-  }
+  // Create overlay object to hold our overlay layer
+  var overlayMaps = {
+    Hotspots: attractions,
+    Food: food,
+    Blue: lynx_blue,
+    Red: lynx_red,
+    Gold: lynx_gold,
+    Silver: lynx_silver
+  };
 
-  // Add our marker cluster layer to the map
-  myMap.addLayer(eats_markers);
 
-});
+  // Create a layer control
+  // Pass in our baseMaps and overlayMaps
+  // Add the layer control to the map
+  L.control.layers(baseMaps, overlayMaps, {
+    collapsed: false
+  }).addTo(mymap);
 
-d3.json('/api/attractions', function(response) {
-
-  // Create a new marker cluster group
-  var spots_markers = L.markerClusterGroup();
-
-  // Loop through data
-  for (var i = 0; i < response.length; i++) {
-
-    // Set the data location property to a variable
-    var name = response[i].name;
-
-    // Check for location property
-    if (name) {
-
-      // Add a new marker to the cluster group and bind a pop-up
-      spots_markers.addLayer(L.marker([response.latitude, response.longitude])
-        .bindPopup(response[i].name));
-    }
-
-  }
-
-  // Add our marker cluster layer to the map
-  myMap.addLayer(spots_markers);
-
-});
-
-var myIcon = new
-L.icon({iconUrl:"/marker-icon.png"});
-
-// function tourismHotspot (feature,
-// layer) {
-// 	layer.bindPopup("<h1 class='infoHeader'>Hi, I'm an info window</h1><p class='infoHeader'>" +
-// 	feature.properties.location +"</p>");
-// 		layer.setIcon(myIcon);
-// };
-
-// L.geoJSON(lynx.json, {
-// 	onEachFeature: tourismHotspot
-// }).addTo(map);
-
+}

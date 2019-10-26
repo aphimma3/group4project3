@@ -26,6 +26,15 @@ class Lynx(db.Model):
     longitude = db.Column(db.String(100))
     category = db.Column(db.String(100))
 
+class Hotspot(db.Model):
+    __tablename__ = 'hotspots'
+
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100))
+    latitude = db.Column(db.String(100))
+    longitude = db.Column(db.String(100))
+    category = db.Column(db.String(255))
+
 class Restaurant(db.Model):
     __tablename__ = 'restaurants'
 
@@ -43,35 +52,23 @@ class Attraction(db.Model):
     latitude = db.Column(db.String(100))
     longitude = db.Column(db.String(100))
 
-    # def __repr__(self):
-    #     return '<Pet %r>' % (self.nickname)
-
-
-# @app.before_first_request
-# def setup():
-#     # Recreate database each time for demo
-#     db.drop_all()
-#     db.create_all()
-
-
-# @app.route("/send", methods=["GET", "POST"])
-# def send():
-#     if request.method == "POST":
-#         nickname = request.form["nickname"]
-#         age = request.form["age"]
-
-#         pet = Pet(nickname=nickname, age=age)
-#         db.session.add(pet)
-#         db.session.commit()
-
-#         return "Thanks for the form data!"
-
-#     return render_template("form.html")
-
-
 @app.route("/api/lynx")
 def list_stops():
     results = db.session.query(Lynx.name, Lynx.latitude, Lynx.longitude, Lynx.category).all()
+
+    places = []
+    for result in results:
+        places.append({
+            "name":  result[0],
+            "latitude":  result[1],
+            "longitude": result[2],
+            "category":  result[3]
+        })
+    return jsonify(places)
+
+@app.route("/api/hotspots")
+def hot_spots():
+    results = db.session.query(Hotspot.name, Hotspot.latitude, Hotspot.longitude, Hotspot.category).all()
 
     places = []
     for result in results:

@@ -3,7 +3,7 @@
 html, body, #map{
 	height: 100%;
 	width: 100%;
-	font-family: "PT Sans", Corbel, 
+	font-family: "PT Sans", Corbel,
 sans-serif;
 }
 
@@ -12,4 +12,8 @@ sans-serif;
 	font-family: "PT Sans", Corbel,
 sans-serif;
 	font-size: 24px;
+}
+
+.leaflet-control-layers-list {
+  margin-top: 50px;
 }
